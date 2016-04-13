@@ -4,8 +4,11 @@ Sim = {};
 
 // Sim.Publisher - base class for event publishers
 Sim.Publisher = function() {
-    this.messageTypes = {};
+    //this.messageTypes = {};
 };
+
+// App-wide set of messages and subscribers.
+Sim.Publisher.prototype.messageTypes = {};
 
 Sim.Publisher.prototype.subscribe = function(message, subscriber, callback) {
     var subscribers = this.messageTypes[message];
